@@ -2,7 +2,7 @@
 const isUserloggedIn = true
 const temperature = 41
 
-// if(temperature === 41) {
+// if(temperature === 40) {
 //     console.log("less then 50");
 // } else{
 //     console.log("temperatiure is grater then 50");
