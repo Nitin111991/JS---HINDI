@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="Phone"
+                    src="https://images.pexels.com/photos/19480742/pexels-photo-19480742/free-photo-of-old-phone.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+                    alt="phone"></li>
+            <li><img width="200px" id="flower" src="https://images.pexels.com/photos/17025383/pexels-photo-17025383/free-photo-of-a-dandelion-parts-of-plants-and-mushrooms-on-a-black-background.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt="flower"></li>
+            <li><img width="200px" id="girl" src="https://images.pexels.com/photos/18901546/pexels-photo-18901546/free-photo-of-blonde-in-white-top-and-long-skirt.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt="girl"></li>
+            <li><img width="200px" id="Horse" src="https://images.pexels.com/photos/19445098/pexels-photo-19445098/free-photo-of-herd-of-horses-with-foals-in-a-pasture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt="Horse"></li>
+            <li><img width="200px" id="house" src="https://images.pexels.com/photos/19343942/pexels-photo-19343942/free-photo-of-the-vatican-is-a-beautiful-place-to-visit.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt="house"></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+    <script>
+        // document.getElementById('Horse').onclick = function(){
+        //     alert("Horse clicked")
+        // }
+
+        // document.getElementById('Horse').addEventListener('click',function(){
+        //     alert("Horse click again")
+        // })
+
+
+         // Learning Events // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget,
+        // clientX, clientY, screenX, screenY
+        // altkey, ctrlkey, shiftkey, keyCode
+        // attachEvent()
+        // jQuery - on
+
+
+        // document.getElementById('images').addEventListener('click',function(e){
+        //     console.log("clicked inside the ul");
+        // }, false)
+       
+        // document.getElementById('girl').addEventListener('click',function(e){
+        //     console.log("girl clicked");
+        //     e.stopPropagation()
+        // }, false)
+
+        // document.getElementById('google').addEventListener('click', function(e) {
+        //     e.preventDefault()
+        //     console.log('google clicked');
+        //     e.preventDefault();
+        //     e.stopPropagation()
+        // }, false)
+
+
+        //................////..............//
+
+        document.querySelector('#images').addEventListener
+            ('click', function(e) {
+                console.log(e.target.tagName);
+                if(e.target.tagName === 'IMG'){
+                    console.log(e.target.id);
+                // console.log(e.target.parentNode);
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+
+
+            })
+            
+            // removeIt.parentNode.removeChild(removeIt)
+    </script>
+</html>
