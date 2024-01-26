@@ -9,6 +9,22 @@
     <button>Button Clicked</button>
 </body>
 <script>
-    
+    class React{
+        constructor(){
+            this.libray = "React"
+            this.server = "https://localhost:3000"
+
+             // requirement
+             document
+                .querySelector('button')
+                .addEventListener('click', this.hanleClick.bind(this))
+        }
+        hanleClick(){
+            console.log("button ckicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
 </script>
 </html>
